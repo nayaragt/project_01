@@ -96,6 +96,7 @@ html, body{
 /* DISTANCIA ENTRE AS FOTOS */
 .gallery-grids-left {
     padding: 2px;
+	border-color: #fff !important;
 }
 .gallery-grid{
 	position:relative;
@@ -348,6 +349,7 @@ html, body{
 		padding: 2px;
 		float: left;
 		width: 33%;
+		border-color: #fff !important; 
 	}
 	.gallery-grids-2{
 		width: 25%;
