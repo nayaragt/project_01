@@ -4559,11 +4559,12 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   /* border-color: #080808; */
 }
 
+/* RODAPE INSTAGRAM */
 .navbar-inverse2 {
   /* background-color: #222; */
-  background-color: transparent;
-  /* background: rgba(140, 217, 140, 0.6);  *//* verde #8cd98c */
-  color: #fff;
+  /* background-color: transparent; */
+  background-color: rgba(191, 191, 191); 
+  color: #404040;
   /* border-color: #080808; */
 }
 .navbar-inverse .navbar-brand {
