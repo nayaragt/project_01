@@ -18,6 +18,9 @@
   
   <style>
   
+.container1 { position: relative; width: 100px; height: 100px; float: left; margin-left: 10px; }
+.checkbox { position: absolute; bottom: 0px; right: 0px; }
+  
   </style>
 </head>
 <body>
@@ -28,6 +31,7 @@
 <!-- BEGIN CONTAINER -->
 <div class="container">
 
+<div class="container">
 
 <div class="w3l-about-grids">
 	<div class="gallery-grids"> 
@@ -37,8 +41,8 @@
 				<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-19/s320x320/18095391_213290179173244_472699839990202368_a.jpg" class="img-responsive img-circle person w3-center" alt="" width="100%" height="100%" style="margin: auto;">
 				</div>
 				<div class="col-xs-8 col-sm-8 text-left">
-				<i class="fa fa-instagram" aria-hidden="true"> lindamenina_acessorios</i>
-				<i class="fa fa-credit-card" aria-hidden="true"> Dep&oacute;sito / Pagseguro</i>
+				<i class="fa fa-instagram" aria-hidden="true"> lindamenina_acessorios <br></i>
+				<i class="fa fa-credit-card" aria-hidden="true"> Dep&oacute;sito / Pagseguro <br></i>
 				<i class="fa fa-question-circle-o" aria-hidden="true"> D&uacute;vida / Direct</i>
 				</div>
 			</div>
@@ -49,6 +53,8 @@
 			</div>
 		</div>
 	</div>
+</div>
+
 </div>
 
 <!--
@@ -71,18 +77,21 @@
 			<div class="col-xs-4 col-sm-4 gallery-grids-left">
 				<a class="example-image-link" href="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.113.902.902/19050754_696837380502082_7808139686727122944_n.jpg" data-lightbox="example-set" data-title="">
 					<img id="myImg1" src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.113.902.902/19050754_696837380502082_7808139686727122944_n.jpg" class="img-responsive" style="width:100%" alt="Image">
+					<input type="checkbox" class="checkbox" id="check1"  onclick="alert('checkbox click');" />
 				</a>
 			</div>
 				
 			<div class="col-xs-4 col-sm-4 gallery-grids-left">
 				<a class="example-image-link" href="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.29.776.776/19050429_246626679154059_2148860494256013312_n.jpg" data-lightbox="example-set" data-title="">
 					<img id="myImg2" src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.29.776.776/19050429_246626679154059_2148860494256013312_n.jpg" class="img-responsive" style="width:100%" alt="Image">
+					<input type="checkbox" class="checkbox" id="check2"  onclick="alert('checkbox click');" />
 				</a>
 			</div>
 				
 			<div class="col-xs-4 col-sm-4 gallery-grids-left">
 				<a class="example-image-link" href="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/18721841_1952572058311304_6997605888261357568_n.jpg" data-lightbox="example-set" data-title="">
 					<img id="myImg3" src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/18721841_1952572058311304_6997605888261357568_n.jpg" class="img-responsive" style="width:100%" alt="Image">
+					<input type="checkbox" class="checkbox" id="check3"  onclick="alert('checkbox click');" />
 				</a>
 			</div>
 			
@@ -155,7 +164,7 @@
 	<div class="gallery-grids"> 
 		<div class="gallery-top-grids">
 			<div class="container text-center margin">
-				<button type="button" class="btn btn-primary btn-lg">Carregar mais</button>
+				<button type="button" class="btn btn-primary btn-md">Carregar mais</button>
 			</div>
 		</div>
 	</div>
@@ -164,8 +173,8 @@
 
 
 <nav class="navbar navbar-inverse navbar-fixed-bottom">
-    <div class="navbar-header w3-display-middle row">
-	
+    <!--<div class="navbar-header w3-display-middle row"> -->
+	<div class="row">
 	  <div class="col-xs-3 col-sm-3">
       <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
 	  </div>
@@ -178,7 +187,6 @@
 	  <div class="col-xs-3 col-sm-3">
 	  <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
 	  </div>
-	  
     </div>
 </nav>
 
