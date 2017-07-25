@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>Instagram Project</title>
 <meta charset="utf-8">
@@ -10,32 +10,71 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+  
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+function mostrar(IdDivParaMostrar) {
+    var tags = document.getElementsByClassName('conteudoMain');
+    for( var i=0; i<tags.length; i++ )
+    {
+        tags[i].style.display = 'none';
+    }
+      document.getElementById(IdDivParaMostrar).style.display = 'block';
+}
+</script>
 
 
-<style>
+  <style>
+  
+  body {
+    font-family: Helvetica, Arial, Sans-Serif !important;
+  }
 
+.checkbox { position: absolute; bottom: 0px; right: 0px; }
+  
 .smallletter {
 	font-size: 10px;
 	
 }
+  
 
-.checkbox { 
-    position: absolute; 
-	bottom: 0px; 
-	right: 0px; 
+  
+.navbar-inverse {
+background-color: rgb(217, 217, 217); /* #d9d9d9*/
+border-color:#f2f2f2;
+color:#404040 !important;
 }
 
-</style>
+.navbar-brand {
+background-color: rgb(217, 217, 217);
+color:#404040 !important;
+}
 
+.post-profile {
+font-size:10px;
+font-family: Helvetica, Arial, Sans-Serif !important;
+padding-top: 10px; 
+padding-bottom: 10px;
+}
+
+  </style>
 </head>
 <body>
-  
-  
 
 <!-- Menu Begin -->
 <div class="w3-sidebar w3-bar-block w3-animate-left smallletter" style="display:none;z-index:5" id="mySidebar">
   <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Fechar &times;</button>
+  
   <a href="#" onClick = "mostrar('Painel')" class="w3-bar-item w3-button">Painel<i class="fa fa-th pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+  
+  <!-- Posts -->
   <a href="#" onClick = "mostrar('Posts')" class="w3-bar-item w3-button">Posts <i class="fa fa-picture-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>		
 	<ul style="list-style-type:none">
 	  <li><a href="#" onClick = "mostrar('PostsCriar')" class="w3-bar-item w3-button">Criar <i class="fa fa-plus-square-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
@@ -43,80 +82,97 @@
 	  <li><a href="#" onClick = "mostrar('PostsRemover')" class="w3-bar-item w3-button">Remover <i class="fa fa-trash-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
 	  <li><a href="#" onClick = "mostrar('PostsListar')" class="w3-bar-item w3-button"> Listar  <i class="fa fa-list-ul pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
 	</ul>
+  <!-- Posts -->
+		
   <a href="#" onClick = "mostrar('Mensagens')" class="w3-bar-item w3-button">Mensagens<i class="fa fa-envelope-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+  
+  <!-- Sobre -->
   <a href="#" onClick = "mostrar('Sobre')" class="w3-bar-item w3-button">Sobre <i class="fa fa-info pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
 	<ul style="list-style-type:none">
 	  <li><a href="#" onClick = "mostrar('Termos')" class="w3-bar-item w3-button">Termos  <i class="fa fa-check-square-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
 	  <li><a href="#" onClick = "mostrar('Ajuda')" class="w3-bar-item w3-button">Central de Ajuda <i class="fa fa-question-circle-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
-	</ul>  
+	</ul>
+  <!-- Sobre -->
+  
   <a href="#" onClick = "mostrar('Perfil')" class="w3-bar-item w3-button">Perfil<i class="fa fa-user-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
   <a href="#" onClick = "mostrar('Desconectar')" class="w3-bar-item w3-button">Desconectar  <i class="fa fa-power-off pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+  
 </div>
 <!-- Menu End -->
 
 <!-- Page Content -->
 <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 
-<!-- CORPO INICIO -->
-<!--
-<div>
-  <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
-</div>-->
 
-  <!--<div class="w3-container">
-    <h1>Sidebar Overlay</h1>
-    <p>The w3-overlay class can be used to create an overlay effect, when opening the sidebar. The w3-overlay class adds a black background with a 50% opacity to the "page content" - this effect will "highlight" the side navigation</p>
-  </div>-->
-
-
-
-
-  
-  
-  
-  
-  
-  
-<!-- BEGIN CONTAINER -->
-<div class="">
-
-<!--
-<div class="container-fluid text-left" style="background-color: rgba(217, 217, 217, 0.5); margin-top: 10px; margin-bottom: 10px; padding-top: 10px; padding-bottom: 10px; color: #404040;">-->
-
-<div class="container-fluid text-left" style="background-color: rgba(217, 217, 217, 0.5); color: #404040; padding-top: 10px; padding-bottom: 10px;">
-
-
-
+<div class="container-fluid text-left" style="background-color: rgba(217, 217, 217, 0.5); padding-top: 10px; padding-bottom: 10px; color: #404040;">
+	
 	<div class="row">
-
-		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 text-left">
-			<button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
-		</div>
-		
 		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
 			<img src="https://instagram.fcgh2-1.fna.fbcdn.net/t51.2885-15/e35/c24.0.271.271/19764602_1701678970137926_7585183437561004032_n.jpg" class="img-responsive img-circle w3-center" alt="" width="100%" height="100%" style="margin: auto;">
 		</div>
-		
+		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 text-left post-profile">
+			<i class="fa fa-credit-card" aria-hidden="true"> Dep&oacute;sito / Pagseguro </i><br>
+			<i class="fa fa-truck" aria-hidden="true"> Enviamos para todo Brasil </i><br>
+			<i class="fa fa-question-circle-o" aria-hidden="true"> Frete a consultar </i><br>
+			<i class="fa fa-user-o" aria-hidden="true"> D&uacute;vidas / Direct </i>
+		</div>
 	</div>
-		
+	
 </div>
-	
+
+<div class="w3-container">
+
+<div class = 'conteudoMain' id='Painel' style="display: none;">
+Hello world!! Painel
+</div>
+
+<div class = 'conteudoMain' id='Posts' style="display: none;">
+Hello world!! Posts
+</div>
+
+<div class = 'conteudoMain' id='Mensagens' style="display: none;">
+Hello world!! Mensagens
+</div>
+
+<div class = 'conteudoMain' id='Sobre' style="display: none;">
+Hello world!! Sobre
+</div>
+
+<div class = 'conteudoMain' id='Termos' style="display: none;">
+Hello world!! Termos
+</div>
+
+<div class = 'conteudoMain' id='Ajuda' style="display: none;">
+Hello world!! Ajuda
+</div>
+
+<div class = 'conteudoMain' id='Perfil' style="display: none;">
+Hello world!! Perfil
+</div>
+
+<div class = 'conteudoMain' id='Desconectar' style="display: none;">
+Hello world!! Desconectar
+</div>
+
+</div>
 
 
-	
+
+<!-- BEGIN CONTAINER -->
+<div class="container">
+
 <div class="row text-center" style="background-color: rgb(217, 217, 217); padding-top: 10px; padding-bottom: 10px; color: #404040; border-color: #f2f2f2;">
 	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-		<span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+		<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true" onclick="w3_open()" style="color: #C24F69;"></span>
 	</div>
 	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-		<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+		<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
 	</div>
 	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-		<!--<span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>-->
-		<i class="fa fa-calculator" aria-hidden="true"></i>
+		<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
 	</div>	
 	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-		<span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+		<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 	</div>
 </div>
 		
@@ -232,79 +288,34 @@
 
 
 
-<!--
+
 <div class="container text-center margin" style="margin-top:15px; margin-bottom: 15px;">
 	<button type="button" class="btn btn-primary btn-md">Carregar mais</button>
-</div>-->
+</div>
 
 
 
 <nav class="navbar-inverse navbar-fixed-bottom">
 	<div class="row text-center" style="background-color: rgb(217, 217, 217); padding-top: 10px; padding-bottom: 10px; color: #404040; border-color:#f2f2f2;">
 	  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
 	  </div>
 	  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-	    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+	    <span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
 	  </div>
 	  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-	    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+	    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
 	  </div>
 	  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-	    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+	    <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
 	  </div>
     </div>
-</nav>  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+</nav>
+
+				
 
 
 
 
-
-     
-<script>
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-function mostrar(IdDivParaMostrar) {
-    var tags = document.getElementsByClassName('conteudoMain');
-    for( var i=0; i<tags.length; i++ )
-    {
-        tags[i].style.display = 'none';
-    }
-      document.getElementById(IdDivParaMostrar).style.display = 'block';
-}
-</script>
-
-
-          
 </body>
 </html>
