@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+
+.smallletter {
+	font-size: 10px;
+	
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-animate-left smallletter" style="display:none;z-index:5" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+ 
+  
+  <a href="#" onClick = "mostrar('Painel')" class="w3-bar-item w3-button">Painel<i class="fa fa-bar-chart-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+  
+  <!-- Posts -->
+  <a href="#" onClick = "mostrar('Posts')" class="w3-bar-item w3-button">Posts <i class="fa fa-picture-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>		
+	<ul style="list-style-type:none">
+	  <li><a href="#" onClick = "mostrar('PostsCriar')" class="w3-bar-item w3-button">  Criar   <i class="fa fa-plus-square-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+	  <li><a href="#" onClick = "mostrar('PostsAlterar')" class="w3-bar-item w3-button">Alterar <i class="fa fa-edit pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+	  <li><a href="#" onClick = "mostrar('PostsRemover')" class="w3-bar-item w3-button">Remover <i class="fa fa-trash-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+	  <li><a href="#" onClick = "mostrar('PostsListar')" class="w3-bar-item w3-button"> Listar  <i class="fa fa-list-ul pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+	</ul>
+  <!-- Posts -->
+		
+  <a href="#" onClick = "mostrar('Mensagens')" class="w3-bar-item w3-button">Mensagens<i class="fa fa-envelope-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+  
+  <!-- Sobre -->
+  <a href="#" onClick = "mostrar('Sobre')" class="w3-bar-item w3-button">Sobre <i class="fa fa-info pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+	<ul style="list-style-type:none">
+	  <li><a href="#" onClick = "mostrar('Termos')" class="w3-bar-item w3-button">Termos  <i class="fa fa-check-square-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+	  <li><a href="#" onClick = "mostrar('Ajuda')" class="w3-bar-item w3-button">Central de Ajuda <i class="fa fa-question-circle-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+	</ul>
+  <!-- Sobre -->
+  
+  <a href="#" onClick = "mostrar('Perfil')" class="w3-bar-item w3-button">Perfil<i class="fa fa-user-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+  <a href="#" onClick = "mostrar('Desconectar')" class="w3-bar-item w3-button">Desconectar  <i class="fa fa-power-off pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+  
+  
+  
+</div>
+
+<!-- Page Content -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<div>
+  <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+    <h1>Sidebar Overlay</h1>
+    <p>The w3-overlay class can be used to create an overlay effect, when opening the sidebar. The w3-overlay class adds a black background with a 50% opacity to the "page content" - this effect will "highlight" the side navigation</p>
+    <p>Click on the "hamburger menu" to see the effect.</p>
+  </div>
+</div>
+
+
+<div class="w3-container">
+
+<div class = 'conteudoMain' id='Painel' style="display: none;">
+Hello world!! Painel
+</div>
+
+<div class = 'conteudoMain' id='Posts' style="display: none;">
+Hello world!! Posts
+</div>
+
+<div class = 'conteudoMain' id='Mensagens' style="display: none;">
+Hello world!! Mensagens
+</div>
+
+<div class = 'conteudoMain' id='Sobre' style="display: none;">
+Hello world!! Sobre
+</div>
+
+<div class = 'conteudoMain' id='Termos' style="display: none;">
+Hello world!! Termos
+</div>
+
+<div class = 'conteudoMain' id='Ajuda' style="display: none;">
+Hello world!! Ajuda
+</div>
+
+<div class = 'conteudoMain' id='Perfil' style="display: none;">
+Hello world!! Perfil
+</div>
+
+<div class = 'conteudoMain' id='Desconectar' style="display: none;">
+Hello world!! Desconectar
+</div>
+
+</div>
+
+
+
+
+
+     
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+function mostrar(IdDivParaMostrar) {
+    var tags = document.getElementsByClassName('conteudoMain');
+    for( var i=0; i<tags.length; i++ )
+    {
+        tags[i].style.display = 'none';
+    }
+      document.getElementById(IdDivParaMostrar).style.display = 'block';
+}
+</script>
+
+
+          
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+<head>
+
+<script>
+function mostrar(IdDivParaMostrar) {
+    var tags = document.getElementsByClassName('conteudoMain');
+    for( var i=0; i<tags.length; i++ )
+    {
+        tags[i].style.display = 'none';
+    }
+      document.getElementById(IdDivParaMostrar).style.display = 'block'
+}
+</script>
+
+</head>
+
+<body>
+
+<a href ="#" onClick = "mostrar('Silver')">Silver</a><br>
+<a href ="#" onClick = "mostrar('Gold')">Gold</a><br>
+<a href ="#" onClick = "mostrar('Platinum')">Platinum</a>
+
+
+</br></br></br></br></br></br></br>
+
+
+
+<div class = 'conteudoMain' id='Silver' style="display: none;">
+Hello world!! Silver
+</div>
+
+<div class = 'conteudoMain' id='Gold' style="display: none;">
+Hello world!! Gold
+</div>
+
+<div class = 'conteudoMain' id='Platinum' style="display: none;">
+Hello world!! Platinum
+</div>
+
+
+
+</body>
+
+
+
+</html>
+
+
+

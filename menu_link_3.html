@@ -1,0 +1,55 @@
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script> 
+       $(function() {
+                $('#attach_silver').click(function() {
+                    $('.hiddenDiv').hide();
+                    $('#sec_silver').show();
+                    return false;
+                });        
+            });
+
+            $(function() {
+                $('#attach_gold').click(function() {
+                    $('.hiddenDiv').hide();
+                    $('#sec_gold').show();
+                    return false;
+                });        
+            });
+
+            $(function() {
+                $('#attach_platinum').click(function() {
+                    $('.hiddenDiv').hide();
+                    $('#sec_platinum').show();
+                    return false;
+                });        
+            });
+</script>
+
+</head>
+<body>
+
+
+<a href="#" id="attach_silver">Silver</a><br>
+<a href="#" id="attach_gold">Gold</a><br>
+<a href="#" id="attach_platinum">Platinum</a>
+	
+	
+<div id="sec_silver" style="display: none;" class="hiddenDiv">
+    Hello world!! Silver              
+</div>
+
+<div id="sec_gold" style="display: none;" class="hiddenDiv">
+    Hello world!! Gold             
+</div>
+
+<div id="sec_platinum" style="display: none;" class="hiddenDiv">
+    Hello world!! Platinum            
+</div>
+
+
+</body>
+</html>
