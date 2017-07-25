@@ -69,7 +69,7 @@ text-align; center;
 </head>
 <body>
 
-<!-- Menu Begin -->
+<!-- MENU -->
 <div class="w3-sidebar w3-bar-block w3-animate-left smallletter" style="display:none;z-index:5" id="mySidebar">
   <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Fechar &times;</button>
   
@@ -99,12 +99,13 @@ text-align; center;
   <a href="#" onClick = "mostrar('Desconectar')" class="w3-bar-item w3-button">Desconectar  <i class="fa fa-power-off pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
   
 </div>
-<!-- Menu End -->
+<!-- MENU -->
 
 <!-- Page Content -->
 <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 
 
+<!-- CABECALHO -->
 <div class="container-fluid text-left" style="background-color: rgba(217, 217, 217, 0.5); padding-top: 10px; padding-bottom: 10px; color: #404040;">
 	
 	<div class="row">
@@ -117,7 +118,7 @@ text-align; center;
 	</div>
 	
 </div>
-
+<!-- CABECALHO -->
 
 
 <!-- BEGIN CONTAINER -->
@@ -140,7 +141,7 @@ text-align; center;
 
 <div class="w3-container">
 
-<div class = 'conteudoMain' id='Painel' style="display: none;">
+<div class = 'conteudoMain' id='Painel1' style="display: none;">
 Hello world!! Painel
 </div>
 
@@ -175,8 +176,10 @@ Hello world!! Desconectar
 </div>
 
 		
-
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
+<!-- BODY -->
+<!-- BODY ROW 1 -->
+<div id="Painel2" class='conteudoMain'>
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain" id="Painel">
 	<a class="example-image-link" href="#myModal" data-toggle="modal" data-lightbox="example-set" data-title="">
 	<img id="myImg1" src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.113.902.902/19050754_696837380502082_7808139686727122944_n.jpg" class="img-responsive" style="width:100%" alt="Image">
 	<!--<input type="checkbox" class="checkbox" id="check1"  onclick="alert('checkbox click');" />-->
@@ -197,9 +200,58 @@ Hello world!! Desconectar
 	<input type="checkbox" class="checkbox" id="check3"  onclick="alert('checkbox click');" />
 	</a>
 </div>
+<!-- BODY ROW 1 -->
 
+<!-- BODY ROW 2 -->
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
+	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
+	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c87.0.906.906/18723085_793758027464540_2992396379042611200_n.jpg" class="img-responsive" style="width:100%" alt="Image">
+	<input type="checkbox" class="checkbox" id="check4"  onclick="alert('checkbox click');" />
+	</a>
+</div>
+				
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
+	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
+	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c2.0.1075.1075/18888776_1596890990352446_5279968623148924928_n.jpg" class="img-responsive" style="width:100%" alt="Image">
+	<input type="checkbox" class="checkbox" id="check5"  onclick="alert('checkbox click');" />
+	</a>
+</div>
+					
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
+	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
+	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.12.743.743/18889156_1695460840748234_3376521503624396800_n.jpg" class="img-responsive" style="width:100%" alt="Image">
+	<input type="checkbox" class="checkbox" id="check6"  onclick="alert('checkbox click');" />
+	</a>
+</div>
+<!-- BODY ROW 2 -->
 
+<!-- BODY ROW 3 -->		
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
+	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
+	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/18947672_326753077742657_9147746244116873216_n.jpg" class="img-responsive" style="width:100%" alt="Image">
+	<input type="checkbox" class="checkbox" id="check7"  onclick="alert('checkbox click');" />
+	</a>
+</div>
+				
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
+	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
+	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/18947535_355017951585460_7523373545297018880_n.jpg" class="img-responsive" style="width:100%" alt="Image">
+	<input type="checkbox" class="checkbox" id="check8"  onclick="alert('checkbox click');" />
+	</a>
+</div>
+				
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
+	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
+	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c135.0.810.810/18812809_823535544466623_3116370970818904064_n.jpg" class="img-responsive" style="width:100%" alt="Image">
+	<input type="checkbox" class="checkbox" id="check9"  onclick="alert('checkbox click');" />
+	</a>
+</div>
+</div>
+<!-- BODY ROW 3 -->
+<!-- BODY -->			
 
+</div>
+<!-- END CONTAINER -->
 
 
   <!-- Modal -->
@@ -234,57 +286,6 @@ Hello world!! Desconectar
     </div>
   </div>
   <!-- Modal -->
-  
-  
-			
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
-	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
-	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c87.0.906.906/18723085_793758027464540_2992396379042611200_n.jpg" class="img-responsive" style="width:100%" alt="Image">
-	<input type="checkbox" class="checkbox" id="check4"  onclick="alert('checkbox click');" />
-	</a>
-</div>
-				
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
-	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
-	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c2.0.1075.1075/18888776_1596890990352446_5279968623148924928_n.jpg" class="img-responsive" style="width:100%" alt="Image">
-	<input type="checkbox" class="checkbox" id="check5"  onclick="alert('checkbox click');" />
-	</a>
-</div>
-					
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
-	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
-	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.12.743.743/18889156_1695460840748234_3376521503624396800_n.jpg" class="img-responsive" style="width:100%" alt="Image">
-	<input type="checkbox" class="checkbox" id="check6"  onclick="alert('checkbox click');" />
-	</a>
-</div>
-					
-
-				
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
-	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
-	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/18947672_326753077742657_9147746244116873216_n.jpg" class="img-responsive" style="width:100%" alt="Image">
-	<input type="checkbox" class="checkbox" id="check7"  onclick="alert('checkbox click');" />
-	</a>
-</div>
-				
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
-	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
-	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/18947535_355017951585460_7523373545297018880_n.jpg" class="img-responsive" style="width:100%" alt="Image">
-	<input type="checkbox" class="checkbox" id="check8"  onclick="alert('checkbox click');" />
-	</a>
-</div>
-				
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
-	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
-	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c135.0.810.810/18812809_823535544466623_3116370970818904064_n.jpg" class="img-responsive" style="width:100%" alt="Image">
-	<input type="checkbox" class="checkbox" id="check9"  onclick="alert('checkbox click');" />
-	</a>
-</div>
-			
-
-</div>
-<!-- END CONTAINER -->
-
 
 
 
