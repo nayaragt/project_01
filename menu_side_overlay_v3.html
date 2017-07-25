@@ -1,192 +1,307 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Instagram Project</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <title>Instagram Project</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<style>
+
+.smallletter {
+	font-size: 10px;
+	
+}
+
+.checkbox { 
+    position: absolute; 
+	bottom: 0px; 
+	right: 0px; 
+}
+
+</style>
+
+</head>
+<body>
+  
+  
+
+<!-- Menu Begin -->
+<div class="w3-sidebar w3-bar-block w3-animate-left smallletter" style="display:none;z-index:5" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Fechar &times;</button>
+  <a href="#" onClick = "mostrar('Painel')" class="w3-bar-item w3-button">Painel<i class="fa fa-th pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+  <a href="#" onClick = "mostrar('Posts')" class="w3-bar-item w3-button">Posts <i class="fa fa-picture-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>		
+	<ul style="list-style-type:none">
+	  <li><a href="#" onClick = "mostrar('PostsCriar')" class="w3-bar-item w3-button">Criar <i class="fa fa-plus-square-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+	  <li><a href="#" onClick = "mostrar('PostsAlterar')" class="w3-bar-item w3-button">Alterar <i class="fa fa-edit pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+	  <li><a href="#" onClick = "mostrar('PostsRemover')" class="w3-bar-item w3-button">Remover <i class="fa fa-trash-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+	  <li><a href="#" onClick = "mostrar('PostsListar')" class="w3-bar-item w3-button"> Listar  <i class="fa fa-list-ul pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+	</ul>
+  <a href="#" onClick = "mostrar('Mensagens')" class="w3-bar-item w3-button">Mensagens<i class="fa fa-envelope-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+  <a href="#" onClick = "mostrar('Sobre')" class="w3-bar-item w3-button">Sobre <i class="fa fa-info pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+	<ul style="list-style-type:none">
+	  <li><a href="#" onClick = "mostrar('Termos')" class="w3-bar-item w3-button">Termos  <i class="fa fa-check-square-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+	  <li><a href="#" onClick = "mostrar('Ajuda')" class="w3-bar-item w3-button">Central de Ajuda <i class="fa fa-question-circle-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+	</ul>  
+  <a href="#" onClick = "mostrar('Perfil')" class="w3-bar-item w3-button">Perfil<i class="fa fa-user-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+  <a href="#" onClick = "mostrar('Desconectar')" class="w3-bar-item w3-button">Desconectar  <i class="fa fa-power-off pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
+</div>
+<!-- Menu End -->
+
+<!-- Page Content -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<!-- CORPO INICIO -->
+<div>
+  <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776; <span style="font-size:20px; color: #ddd">Painel Admin</span></button>
+</div>
+  <!--<div class="w3-container">
+    <h1>Sidebar Overlay</h1>
+    <p>The w3-overlay class can be used to create an overlay effect, when opening the sidebar. The w3-overlay class adds a black background with a 50% opacity to the "page content" - this effect will "highlight" the side navigation</p>
+  </div>-->
+
+
+
+
+  
+  
+  
+  
+  
+  
+<!-- BEGIN CONTAINER -->
+<div class="">
+
+
+<div class="container-fluid text-left" style="background-color: rgba(217, 217, 217, 0.5); margin-top: 10px; margin-bottom: 10px; padding-top: 10px; padding-bottom: 10px; color: #404040;">
+	
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+			<img src="https://instagram.fcgh2-1.fna.fbcdn.net/t51.2885-15/e35/c24.0.271.271/19764602_1701678970137926_7585183437561004032_n.jpg" class="img-responsive img-circle w3-center" alt="" width="100%" height="100%" style="margin: auto;">
+		</div>
+		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 text-left">
+			<i class="fa fa-credit-card" aria-hidden="true"> Dep&oacute;sito / Pagseguro </i><br>
+			<i class="fa fa-truck" aria-hidden="true"> Enviamos para todo Brasil </i><br>
+			<i class="fa fa-question-circle-o" aria-hidden="true"> Frete a consultar </i><br>
+			<i class="fa fa-user-o" aria-hidden="true"> D&uacute;vidas / Direct </i>
+		</div>
+	</div>
+				
+	<div class="text-left" style="background-color: #fff; color: #404040;">
+		<i class="fa fa-instagram" aria-hidden="true"> menina_acessorios <br></i>
+	</div>
+		
+</div>
+	
+
+
+	
+<div class="row text-center" style="background-color: rgb(217, 217, 217); padding-top: 10px; padding-bottom: 10px; color: #404040; border-color: #f2f2f2;">
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+		<span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+	</div>
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+		<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+	</div>
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+		<!--<span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>-->
+		<i class="fa fa-calculator" aria-hidden="true"></i>
+	</div>	
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+		<span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+	</div>
+</div>
+		
+
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left">
+	<a class="example-image-link" href="#myModal" data-toggle="modal" data-lightbox="example-set" data-title="">
+	<img id="myImg1" src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.113.902.902/19050754_696837380502082_7808139686727122944_n.jpg" class="img-responsive" style="width:100%" alt="Image">
+	<!--<input type="checkbox" class="checkbox" id="check1"  onclick="alert('checkbox click');" />-->
+	<input type="checkbox" class="checkbox" id="check1"  onclick="myModal" />
+	</a>
+</div>
+				
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left">
+	<a class="example-image-link" href="#myModal" data-toggle="modal" data-lightbox="example-set" data-title="">
+	<img id="myImg2" src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.29.776.776/19050429_246626679154059_2148860494256013312_n.jpg" class="img-responsive" style="width:100%" alt="Image">
+	<input type="checkbox" class="checkbox" id="check2"  onclick="alert('Item inclu&iacute;do no carrinho!');" />
+	</a>
+</div>
+				
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left">
+	<a class="example-image-link" href="#myModal" data-toggle="modal" data-lightbox="example-set" data-title="">
+	<img id="myImg3" src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/18721841_1952572058311304_6997605888261357568_n.jpg" class="img-responsive" style="width:100%" alt="Image">
+	<input type="checkbox" class="checkbox" id="check3"  onclick="alert('checkbox click');" />
+	</a>
+</div>
+
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <!--<h4 class="modal-title">Morrendo de amores, simples assim (2)</h4>-->
+		  <p class="modal-title">Morrendo de amores, simples assim (2)</p>
+        </div>
+        <div class="modal-body">
+			<div class="row">
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+			<img id="myImg1" src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.113.902.902/19050754_696837380502082_7808139686727122944_n.jpg" class="img-responsive" style="width:100%" alt="Image">
+			</div>
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+			<!--<p>Morrendo de amores, simples assim (2)</p>-->
+			<p>R$ 29,99</p>
+			<p>#brincopedraria #brincogrande #acessoriosfemininos #uselindamenina</p>
+			</div>
+			</div>
+        </div>
+       <div class="modal-footer">
+	   <button type="button" class="btn btn-default" data-dismiss="">Comprar!</button>
+         <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <!-- Modal -->
+  
+  
+			
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left">
+	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
+	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c87.0.906.906/18723085_793758027464540_2992396379042611200_n.jpg" class="img-responsive" style="width:100%" alt="Image">
+	<input type="checkbox" class="checkbox" id="check4"  onclick="alert('checkbox click');" />
+	</a>
+</div>
+				
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left">
+	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
+	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c2.0.1075.1075/18888776_1596890990352446_5279968623148924928_n.jpg" class="img-responsive" style="width:100%" alt="Image">
+	<input type="checkbox" class="checkbox" id="check5"  onclick="alert('checkbox click');" />
+	</a>
+</div>
+					
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left">
+	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
+	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.12.743.743/18889156_1695460840748234_3376521503624396800_n.jpg" class="img-responsive" style="width:100%" alt="Image">
+	<input type="checkbox" class="checkbox" id="check6"  onclick="alert('checkbox click');" />
+	</a>
+</div>
+					
+
+				
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left">
+	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
+	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/18947672_326753077742657_9147746244116873216_n.jpg" class="img-responsive" style="width:100%" alt="Image">
+	<input type="checkbox" class="checkbox" id="check7"  onclick="alert('checkbox click');" />
+	</a>
+</div>
+				
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left">
+	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
+	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/18947535_355017951585460_7523373545297018880_n.jpg" class="img-responsive" style="width:100%" alt="Image">
+	<input type="checkbox" class="checkbox" id="check8"  onclick="alert('checkbox click');" />
+	</a>
+</div>
+				
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left">
+	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
+	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c135.0.810.810/18812809_823535544466623_3116370970818904064_n.jpg" class="img-responsive" style="width:100%" alt="Image">
+	<input type="checkbox" class="checkbox" id="check9"  onclick="alert('checkbox click');" />
+	</a>
+</div>
+			
+
+</div>
+<!-- END CONTAINER -->
+
+
+
+
+<div class="container text-center margin" style="margin-top:15px; margin-bottom: 15px;">
+	<button type="button" class="btn btn-primary btn-md">Carregar mais</button>
+</div>
+
+
+
+<nav class="navbar-inverse navbar-fixed-bottom">
+	<div class="row text-center" style="background-color: rgb(217, 217, 217); padding-top: 10px; padding-bottom: 10px; color: #404040; border-color:#f2f2f2;">
+	  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+	  </div>
+	  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+	    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+	  </div>
+	  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+	    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+	  </div>
+	  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+	    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+	  </div>
+    </div>
+</nav>  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+     
 <script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
 function mostrar(IdDivParaMostrar) {
     var tags = document.getElementsByClassName('conteudoMain');
     for( var i=0; i<tags.length; i++ )
     {
         tags[i].style.display = 'none';
     }
-      document.getElementById(IdDivParaMostrar).style.display = 'block'
+      document.getElementById(IdDivParaMostrar).style.display = 'block';
 }
 </script>
 
-<style>
-body {
-    font-family: "Lato", sans-serif;
-	background-color: #f2f2f2;
-}
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-	background-color: rgb(217, 217, 217);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 14px; /* 25px */
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 14px;
-    margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 14px;} /* 18px */
-}
-
-div.container {
-    width: 100%;
-    /* border: 1px solid gray; */
-}
-
-header {
-    padding: 1em;
-    color: white;
-    background-color: black;
-    clear: left;
-    text-align: left;
-}
-
-article {
-    padding: 1em;
-    overflow: hidden;
-	background-color: white;
-	width: 100%;
-	height: 400px;
-}
-
-
-</style>
-</head>
-<body>
-
-<div class="container">
-
-<header>
-<h2>Instagram Project</h2>
-<p>Click on the element below to open the side navigation menu.</p>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
-</header>
-  
-  
-<!-- Menu Overlay -->
-<div id="mySidenav" class="sidenav">
-
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Fechar &times;</a>
-  <a href="#" onClick = "mostrar('Painel')">Painel<i class="fa fa-bar-chart-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
-  
-  <!-- Posts -->
-  <a href="#" onClick = "mostrar('Posts')">Posts <i class="fa fa-picture-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>		
-	<ul style="list-style-type:none">
-	  <li><a href="#" onClick = "mostrar('PostsCriar')">  Criar   <i class="fa fa-plus-square-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
-	  <li><a href="#" onClick = "mostrar('PostsAlterar')">Alterar <i class="fa fa-edit pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
-	  <li><a href="#" onClick = "mostrar('PostsRemover')">Remover <i class="fa fa-trash-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
-	  <li><a href="#" onClick = "mostrar('PostsListar')"> Listar  <i class="fa fa-list-ul pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
-	</ul>
-  <!-- Posts -->
-		
-  <a href="#" onClick = "mostrar('Mensagens')">Mensagens<i class="fa fa-envelope-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
-  
-  <!-- Sobre -->
-  <a href="#" onClick = "mostrar('Sobre')">Sobre <i class="fa fa-info pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
-	<ul style="list-style-type:none">
-	  <li><a href="#" onClick = "mostrar('Termos')">Termos  <i class="fa fa-check-square-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
-	  <li><a href="#" onClick = "mostrar('Ajuda')">Central de Ajuda <i class="fa fa-question-circle-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
-	</ul>
-  <!-- Sobre -->
-  
-  <a href="#" onClick = "mostrar('Perfil')">Perfil<i class="fa fa-user-o pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
-  <a href="#" onClick = "mostrar('Desconectar')">Desconectar  <i class="fa fa-power-off pull-right" aria-hidden="true" style="font-size:14px;"></i></a>
-
-</div>
-<!-- Menu Overlay -->
-
-
-<article>
-
-<div class = 'conteudoMain' id='Painel' style="display: none;">
-Hello world!! Painel
-</div>
-
-<div class = 'conteudoMain' id='Posts' style="display: none;">
-Hello world!! Posts
-</div>
-
-<div class = 'conteudoMain' id='Mensagens' style="display: none;">
-Hello world!! Mensagens
-</div>
-
-<div class = 'conteudoMain' id='Sobre' style="display: none;">
-Hello world!! Sobre
-</div>
-
-<div class = 'conteudoMain' id='Termos' style="display: none;">
-Hello world!! Termos
-</div>
-
-<div class = 'conteudoMain' id='Ajuda' style="display: none;">
-Hello world!! Ajuda
-</div>
-
-<div class = 'conteudoMain' id='Perfil' style="display: none;">
-Hello world!! Perfil
-</div>
-
-<div class = 'conteudoMain' id='Desconectar' style="display: none;">
-Hello world!! Desconectar
-</div>
-
-</article>
-
-
-
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "210px";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-
-$(".button-collapse").sideNav("hide")
-
-$("#sidenav-overlay").hide();
-</script>
-
-
-     
+          
 </body>
-</html> 
+</html>
