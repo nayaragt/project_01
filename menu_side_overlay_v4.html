@@ -28,14 +28,18 @@ function mostrar(IdDivParaMostrar) {
     }
       document.getElementById(IdDivParaMostrar).style.display = 'block';
 }
+
+function showdivPainel() {
+    document.getElementById("Painel").style.display = "block";
+}
 </script>
 
 
-  <style>
+<style>
   
-  body {
+body {
     font-family: Helvetica, Arial, Sans-Serif !important;
-  }
+}
 
 .checkbox { position: absolute; bottom: 0px; right: 0px; }
   
@@ -43,8 +47,6 @@ function mostrar(IdDivParaMostrar) {
 	font-size: 10px;
 	
 }
-  
-
   
 .navbar-inverse {
 background-color: rgb(217, 217, 217); /* #d9d9d9*/
@@ -65,9 +67,9 @@ padding-bottom: 10px;
 text-align; center;
 }
 
-  </style>
+</style>
 </head>
-<body>
+<body onload="showdivPainel();">
 
 <!-- MENU -->
 <div class="w3-sidebar w3-bar-block w3-animate-left smallletter" style="display:none;z-index:5" id="mySidebar">
@@ -105,7 +107,7 @@ text-align; center;
 <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 
 
-<!-- CABECALHO -->
+<!-- CABECALHO PROFILE -->
 <div class="container-fluid text-left" style="background-color: rgba(217, 217, 217, 0.5); padding-top: 10px; padding-bottom: 10px; color: #404040;">
 	
 	<div class="row">
@@ -118,12 +120,11 @@ text-align; center;
 	</div>
 	
 </div>
-<!-- CABECALHO -->
+<!-- CABECALHO PROFILE -->
 
 
-<!-- BEGIN CONTAINER -->
-<div class="container">
 
+<!-- MENU PARTE 1 HEADER 
 <div class="row text-center" style="background-color: rgb(217, 217, 217); padding-top: 10px; padding-bottom: 10px; color: #404040; border-color: #f2f2f2;">
 	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
 		<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true" onclick="w3_open()" style="color: #C24F69;"></span>
@@ -138,12 +139,37 @@ text-align; center;
 		<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 	</div>
 </div>
+<!-- MENU PARTE 1 HEADER -->
 
-<div class="w3-container">
+<!-- MENU PARTE 1 HEADER -->
+<!-- <nav class="navbar-inverse navbar-fixed-top">-->
+<nav class="navbar-inverse navbar-fixed">
+	<div class="row text-center" style="background-color: rgb(217, 217, 217); padding-top: 10px; padding-bottom: 10px; color: #404040; border-color:#f2f2f2;">
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+		<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true" onclick="w3_open()" style="color: #C24F69;"></span>
+	</div>
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+		<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+	</div>
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+		<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+	</div>	
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+		<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+	</div>
+    </div>
+</nav>
+<!-- MENU PARTE 1 HEADER -->
+				
 
-<div class = 'conteudoMain' id='Painel1' style="display: none;">
-Hello world!! Painel
-</div>
+
+
+
+
+
+<!-- BEGIN CONTAINER -->
+<div class="container">
+
 
 <div class = 'conteudoMain' id='Posts' style="display: none;">
 Hello world!! Posts
@@ -173,28 +199,25 @@ Hello world!! Perfil
 Hello world!! Desconectar
 </div>
 
-</div>
+<!-- PAINEL BODY -->
+<div id="Painel" class='conteudoMain' style="display:none;">
 
-		
-<!-- BODY -->
 <!-- BODY ROW 1 -->
-<div id="Painel2" class='conteudoMain'>
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain" id="Painel">
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left">
 	<a class="example-image-link" href="#myModal" data-toggle="modal" data-lightbox="example-set" data-title="">
 	<img id="myImg1" src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.113.902.902/19050754_696837380502082_7808139686727122944_n.jpg" class="img-responsive" style="width:100%" alt="Image">
-	<!--<input type="checkbox" class="checkbox" id="check1"  onclick="alert('checkbox click');" />-->
 	<input type="checkbox" class="checkbox" id="check1"  onclick="myModal" />
 	</a>
 </div>
 				
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left">
 	<a class="example-image-link" href="#myModal" data-toggle="modal" data-lightbox="example-set" data-title="">
 	<img id="myImg2" src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.29.776.776/19050429_246626679154059_2148860494256013312_n.jpg" class="img-responsive" style="width:100%" alt="Image">
 	<input type="checkbox" class="checkbox" id="check2"  onclick="alert('Item inclu&iacute;do no carrinho!');" />
 	</a>
 </div>
 				
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left">
 	<a class="example-image-link" href="#myModal" data-toggle="modal" data-lightbox="example-set" data-title="">
 	<img id="myImg3" src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/18721841_1952572058311304_6997605888261357568_n.jpg" class="img-responsive" style="width:100%" alt="Image">
 	<input type="checkbox" class="checkbox" id="check3"  onclick="alert('checkbox click');" />
@@ -203,21 +226,21 @@ Hello world!! Desconectar
 <!-- BODY ROW 1 -->
 
 <!-- BODY ROW 2 -->
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left">
 	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
 	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c87.0.906.906/18723085_793758027464540_2992396379042611200_n.jpg" class="img-responsive" style="width:100%" alt="Image">
 	<input type="checkbox" class="checkbox" id="check4"  onclick="alert('checkbox click');" />
 	</a>
 </div>
 				
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left">
 	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
 	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c2.0.1075.1075/18888776_1596890990352446_5279968623148924928_n.jpg" class="img-responsive" style="width:100%" alt="Image">
 	<input type="checkbox" class="checkbox" id="check5"  onclick="alert('checkbox click');" />
 	</a>
 </div>
 					
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left">
 	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
 	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c0.12.743.743/18889156_1695460840748234_3376521503624396800_n.jpg" class="img-responsive" style="width:100%" alt="Image">
 	<input type="checkbox" class="checkbox" id="check6"  onclick="alert('checkbox click');" />
@@ -226,29 +249,35 @@ Hello world!! Desconectar
 <!-- BODY ROW 2 -->
 
 <!-- BODY ROW 3 -->		
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left">
 	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
 	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/18947672_326753077742657_9147746244116873216_n.jpg" class="img-responsive" style="width:100%" alt="Image">
 	<input type="checkbox" class="checkbox" id="check7"  onclick="alert('checkbox click');" />
 	</a>
 </div>
 				
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left">
 	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
 	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/18947535_355017951585460_7523373545297018880_n.jpg" class="img-responsive" style="width:100%" alt="Image">
 	<input type="checkbox" class="checkbox" id="check8"  onclick="alert('checkbox click');" />
 	</a>
 </div>
 				
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left conteudoMain">
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 gallery-grids-left">
 	<a class="example-image-link" href="images/p36.jpg" data-lightbox="example-set" data-title="">
 	<img src="https://instagram.fgru5-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c135.0.810.810/18812809_823535544466623_3116370970818904064_n.jpg" class="img-responsive" style="width:100%" alt="Image">
 	<input type="checkbox" class="checkbox" id="check9"  onclick="alert('checkbox click');" />
 	</a>
 </div>
-</div>
 <!-- BODY ROW 3 -->
-<!-- BODY -->			
+
+</div>
+<!-- PAINEL BODY -->			
+
+<!-- depois volta o botao
+<div class="text-center margin" style="margin-top:15px; margin-bottom: 15px;">
+	<button type="button" class="btn btn-primary btn-md">Carregar mais</button>
+</div> -->
 
 </div>
 <!-- END CONTAINER -->
@@ -289,12 +318,9 @@ Hello world!! Desconectar
 
 
 
-<div class="container text-center margin conteudoMain" style="margin-top:15px; margin-bottom: 15px;">
-	<button type="button" class="btn btn-primary btn-md">Carregar mais</button>
-</div>
 
 
-
+<!-- MENU PARTE 2 FOOTER -->
 <nav class="navbar-inverse navbar-fixed-bottom">
 	<div class="row text-center" style="background-color: rgb(217, 217, 217); padding-top: 10px; padding-bottom: 10px; color: #404040; border-color:#f2f2f2;">
 	  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
@@ -311,7 +337,7 @@ Hello world!! Desconectar
 	  </div>
     </div>
 </nav>
-
+<!-- MENU PARTE 2 FOOTER -->
 				
 
 

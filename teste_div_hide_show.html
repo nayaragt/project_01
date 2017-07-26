@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        function remove_style(all)
+        {
+            var i = all.length;
+            var j, is_hidden;
+            var attr =
+            [
+                'style'
+            ];
+
+            var attr_len = attr.length;
+
+            console.log(attr_len);
+            j = attr_len;
+
+            all.removeAttribute(attr[0]);
+        }
+
+        function showdiv()
+        {
+            var all = document.getElementById('campaign-alert');
+            remove_style(all);
+        }
+    </script>
+
+</head>
+<body onload="showdiv();">
+<div id="popup"> 
+<div id="campaign-alert" style="display:none;">
+<h1>show me </h1>
+</div>
+</div>
+</body>
+</html>
